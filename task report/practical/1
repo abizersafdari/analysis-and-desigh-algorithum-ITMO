@@ -1,0 +1,13 @@
+
+import numpy as np
+import timeit
+
+def cons(v):
+    "return the constant value C"
+    return "C"
+
+
+t1=[]
+for i in range(1, 5):
+    v=np.ramdom.rand(i)
+    t1.append(timeit.timet('cons(v)','from_main_import cons,v',number=5)/5)
